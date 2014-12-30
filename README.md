@@ -55,6 +55,7 @@ Therefore, this project should take as a practice but not a product.
 | WebContent.swift | Class for fetching web page |
 | AlertMessage.swift | Class for showing alert message |
 
-## Quote comes from
+
+## VGM Website
 
 Google `khinsider Game mp3`
