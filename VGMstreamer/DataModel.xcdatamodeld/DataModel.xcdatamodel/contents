@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14B25" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="DataModel" representedClassName="DataModel" syncable="YES">
+        <attribute name="albumLink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="albumName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pickAlbum" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="pickSong" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="songLink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="songName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="DataModel" positionX="-54" positionY="27" width="128" height="135"/>
+    </elements>
+</model>
