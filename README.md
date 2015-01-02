@@ -33,14 +33,14 @@ I don't own any copyright of these songs and khinsider might change the website 
 Therefore, this project should take as a practice but not a product.
 
 ## Example
-![Main.storyboard](http://i.imgur.com/EvZ1bNy.png)
-![Main Page](http://i.imgur.com/91zTMxB.png)
-![Album Loading Page](http://i.imgur.com/ybxHNnK.png)
-![Add Album into Favorite List](http://i.imgur.com/3f1bvE9.png)
-![Song List Page](http://i.imgur.com/oSYBLKE.png)
-![Pull to Refresh](http://i.imgur.com/zOboGu2.png)
-![My Favorite Albums](http://i.imgur.com/aJBUjKY.png)
-![My Favorite Songs](http://i.imgur.com/VYh9Mxn.png)
+![Main.storyboard](https://github.com/tsunghao/VGMstreamer/blob/master/screenshots/01_storyboard.png)
+![Main Page](https://github.com/tsunghao/VGMstreamer/blob/master/screenshots/02_MainPage.png)
+![Album Loading Page](https://github.com/tsunghao/VGMstreamer/blob/master/screenshots/03_fetchingAlbumList.png)
+![Add Album into Favorite List](https://github.com/tsunghao/VGMstreamer/blob/master/screenshots/04_addFavoriteAlbum.png)
+![Song List Page](https://github.com/tsunghao/VGMstreamer/blob/master/screenshots/05_addFavoriteSongs.png)
+![Pull to Refresh](https://github.com/tsunghao/VGMstreamer/blob/master/screenshots/06_pulltoRefresh.png)
+![My Favorite Albums](https://github.com/tsunghao/VGMstreamer/blob/master/screenshots/07_favoriteAlbumList.png)
+![My Favorite Songs](https://github.com/tsunghao/VGMstreamer/blob/master/screenshots/08_favoriteSongList.png)
 
 
 ## File Description
