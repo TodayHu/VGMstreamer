@@ -54,6 +54,8 @@ Therefore, this project should take as a practice but not a product.
 | StringHandle.swift | Class for handling strings |
 | WebContent.swift | Class for fetching web page |
 | AlertMessage.swift | Class for showing alert message |
+| Main.storyboard | UI layout |
+| Info.plist | meta information for app |
 
 
 ## VGM Website
