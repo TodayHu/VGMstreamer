@@ -1,4 +1,5 @@
 # VGMstreamer
+# AppleWatch branch beta 6.2 unstable
 
 ## Project Description
 #### 中文
@@ -41,6 +42,7 @@ Therefore, this project should take as a practice but not a product.
 ![Pull to Refresh](https://github.com/tsunghao/VGMstreamer/blob/master/screenshots/06_pulltoRefresh.png)
 ![My Favorite Albums](https://github.com/tsunghao/VGMstreamer/blob/master/screenshots/07_favoriteAlbumList.png)
 ![My Favorite Songs](https://github.com/tsunghao/VGMstreamer/blob/master/screenshots/08_favoriteSongList.png)
+![Apple Watch](https://github.com/tsunghao/VGMstreamer/blob/AppleWatch/screenshots/09_AppleWatch.png)
 
 
 ## File Description
