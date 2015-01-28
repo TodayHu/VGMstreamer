@@ -1,5 +1,5 @@
 # VGMstreamer
-## AppleWatch branch beta 6.2 unstable
+## AppleWatch feature still in beta of Xcode 6.2, unstable
 
 ## Project Description
 #### 中文
