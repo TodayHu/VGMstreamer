@@ -115,7 +115,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }()
     
     // MARK: - Core Data Saving support
-    
+
     func saveContext () {
         if let moc = self.managedObjectContext {
             var error: NSError? = nil
@@ -127,6 +127,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 abort()
             }
         }
+    }
+    
+    // MARK: - Notification for WatchKit event
+    func application(application: UIApplication!, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]!, reply: (([NSObject : AnyObject]!) -> Void)!) {
+        println("[In iPhone@AppDelegate] userInfo: \(userInfo), reply: \(reply)")
+        
+        let watchKitInformation = WatchKitInfo(playerDict: userInfo, replyDict: reply)
+        
+        NSNotificationCenter.defaultCenter().postNotificationName("WatchKitDidMakeRequest", object: watchKitInformation)
     }
 }
 

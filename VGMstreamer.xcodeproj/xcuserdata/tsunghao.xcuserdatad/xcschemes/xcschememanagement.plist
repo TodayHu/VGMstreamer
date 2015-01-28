@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>VGMstreamer WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>9943B8821A78A1DE000000D9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>99E466491A263ED7009360A3</key>
 		<dict>
 			<key>primary</key>
