@@ -128,5 +128,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    // MARK: - Notification for WatchKit event
+    func application(application: UIApplication!, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]!, reply: (([NSObject : AnyObject]!) -> Void)!) {
+        println("[In iPhone@AppDelegate] userInfo: \(userInfo), reply: \(reply)")
+        
+        let watchKitInformation = WatchKitInfo(playerDict: userInfo, replyDict: reply)
+        
+        NSNotificationCenter.defaultCenter().postNotificationName("WatchKitDidMakeRequest", object: watchKitInformation)
+    }
 }
 

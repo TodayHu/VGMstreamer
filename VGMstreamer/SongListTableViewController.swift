@@ -10,12 +10,13 @@ import UIKit
 import CoreData
 import MediaPlayer
 
+// enum for SongList View type (There are 3 entries lead to this Controller)
 enum SongListType {
     case GeneralSong
     case FavoriteAlbum
     case FavoriteSong
 }
-
+// enum for Shuffle mode
 enum ShuffleMode {
     case None
     case Shuffle
@@ -29,7 +30,7 @@ enum ShuffleMode {
         }
     }
 }
-
+// enum for Playback mode
 enum PlaybackMode {
     case Single
     case RepeatSingle
@@ -43,6 +44,23 @@ enum PlaybackMode {
             return "Repeat one"
         case .RepeatAlbum:
             return "Repeat all"
+        }
+    }
+}
+// enum for Section/row update. Playback means play automatically
+enum SectionRowUpdate {
+    case Next
+    case Previous
+    case Playback
+    
+    func description() -> String {
+        switch self {
+        case .Next:
+            return "Next"
+        case .Previous:
+            return "Previous"
+        case .Playback:
+            return "Playback"
         }
     }
 }
@@ -64,6 +82,7 @@ class SongListViewController: UIViewController, UITableViewDelegate, UITableView
     
     var currentSection = -1
     var currentRow = -1
+    var currentSongName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,6 +120,9 @@ class SongListViewController: UIViewController, UITableViewDelegate, UITableView
         refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refresher.addTarget(self, action: "pullToRefresh", forControlEvents: UIControlEvents.ValueChanged)
         self.songTableView.addSubview(refresher)
+
+        // Notification for WatchKit event
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("handleWatchKitRequest:"), name: "WatchKitDidMakeRequest", object: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -164,8 +186,10 @@ class SongListViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if songListType == .FavoriteSong {
             mediaPlayer.contentURL = NSURL(string: favoriteSongItems[indexPath.section][indexPath.row].songLink)
+            currentSongName = favoriteSongItems[indexPath.section][indexPath.row].songName
         } else {
             mediaPlayer.contentURL = NSURL(string: songItems[indexPath.row].songLink)
+            currentSongName = songItems[indexPath.row].songName
         }
         currentSection = indexPath.section
         currentRow = indexPath.row
@@ -219,16 +243,13 @@ class SongListViewController: UIViewController, UITableViewDelegate, UITableView
                 }
                 if currentRow == -1 {
                     currentRow = 0
-                    let rowToSelect: NSIndexPath = NSIndexPath(forRow: currentRow, inSection: currentSection)
-                    self.songTableView.selectRowAtIndexPath(rowToSelect, animated: true, scrollPosition: UITableViewScrollPosition.None)
-                    self.tableView(self.songTableView, didSelectRowAtIndexPath: rowToSelect)
+                    self.selectTableItem()
                 } else {
                     self.startMediaPlayer()
                 }
             }
         }
     }
-    
     
     @IBAction func stopButtonTapped(sender: UIBarButtonItem) {
         if !songItems.isEmpty {
@@ -285,35 +306,80 @@ class SongListViewController: UIViewController, UITableViewDelegate, UITableView
         println("startMediaPlayer create timer = \(globalTimer)")
     }
     
-    func selectSong() {
-        if playBackMode == .RepeatAlbum {
-            if mediaPlayer.playbackState == MPMoviePlaybackState.Paused && !manualPaused { // last song was ended natuarally
-                if shuffleMode == .None {
-                    currentRow++
-                    if songListType == .FavoriteSong {
-                        if currentRow == favoriteSongItems[currentSection].count {
-                            currentRow = 0
-                            currentSection++
-                            if currentSection == favoriteSongItems.count {
-                                currentSection = 0
-                            }
+    func selectTableItem() {
+        let rowToSelect: NSIndexPath = NSIndexPath(forRow: currentRow, inSection: currentSection)
+        self.songTableView.selectRowAtIndexPath(rowToSelect, animated: true, scrollPosition: UITableViewScrollPosition.None)
+        self.tableView(self.songTableView, didSelectRowAtIndexPath: rowToSelect)
+    }
+    
+    func previousSong() {
+        self.stopMediaPlayer(type: MPMoviePlaybackState.Stopped)
+        self.updateSectionRow(.Previous)
+        self.selectTableItem()
+    }
+    
+    func nextSong() {
+        self.stopMediaPlayer(type: MPMoviePlaybackState.Stopped)
+        self.updateSectionRow(.Next)
+        self.selectTableItem()
+    }
+    
+    func updateSectionRow(update: SectionRowUpdate) {
+        
+        let takeOneStep = { (forward: Bool) -> Void in
+            let step = forward ? 1 : -1
+            
+            if self.shuffleMode == .None {
+                self.currentRow += step
+
+                if self.songListType == .FavoriteSong {
+                    if (forward && self.currentRow == self.favoriteSongItems[self.currentSection].count) ||
+                       (!forward && self.currentRow < 0) {
+                        self.currentSection += step
+
+                        if self.currentSection >= 0 {
+                            self.currentSection %= self.favoriteSongItems.count
+                        } else {
+                            self.currentSection = self.favoriteSongItems.count - 1
                         }
-                    } else {
-                        if currentRow == songItems.count {
-                            currentRow = 0
+                        if forward {
+                            self.currentRow = 0
                         }
-                    }
-                } else {
-                    if songListType == .FavoriteSong {
-                        currentSection = Int(arc4random_uniform(UInt32(favoriteSongItems.count)))
-                        currentRow = Int(arc4random_uniform(UInt32(favoriteSongItems[currentSection].count)))
-                    } else {
-                        currentRow = Int(arc4random_uniform(UInt32(songItems.count)))
                     }
                 }
-                let rowToSelect: NSIndexPath = NSIndexPath(forRow: currentRow, inSection: currentSection)
-                self.songTableView.selectRowAtIndexPath(rowToSelect, animated: true, scrollPosition: UITableViewScrollPosition.None)
-                self.tableView(self.songTableView, didSelectRowAtIndexPath: rowToSelect)
+                let songItemMax = self.songListType == .FavoriteSong ? self.favoriteSongItems[self.currentSection].count : self.songItems.count
+                
+                if self.currentRow >= 0 {
+                    self.currentRow %= songItemMax
+                } else {
+                    self.currentRow = songItemMax - 1
+                }
+            } else {
+                if self.songListType == .FavoriteSong {
+                    self.currentSection = Int(arc4random_uniform(UInt32(self.favoriteSongItems.count)))
+                }
+                let songItemMax = self.songListType == .FavoriteSong ? self.favoriteSongItems[self.currentSection].count : self.songItems.count
+                self.currentRow = Int(arc4random_uniform(UInt32(songItemMax)))
+            }
+        }
+        
+        switch update {
+            case .Next:
+                fallthrough
+            case .Playback:
+                takeOneStep(true)
+            case .Previous:
+                takeOneStep(false)
+        }
+        println("currentSection = \(currentSection), currentRow = \(currentRow)")
+    }
+    
+    func selectSong() {
+        if playBackMode == .RepeatAlbum {
+            // last song was ended natuarally
+            if mediaPlayer.playbackState == MPMoviePlaybackState.Paused && !manualPaused {
+                self.updateSectionRow(.Playback)
+                self.selectTableItem()
             }
         } else if playBackMode == .RepeatSingle {
             if mediaPlayer.playbackState != MPMoviePlaybackState.Playing && !manualPaused {
@@ -419,6 +485,26 @@ class SongListViewController: UIViewController, UITableViewDelegate, UITableView
         var currentTime = NSDate.timeIntervalSinceReferenceDate()
         var elapsedTime = currentTime - startTime
         println("parseSongList = \(Double(elapsedTime))")
+    }
+    
+    // MARK: - WatchKit Notification
+    func handleWatchKitRequest(notification: NSNotification) {
+        let watchKitInfo = notification.object as? WatchKitInfo
+        
+        if let requestedAction = watchKitInfo?.playerRequest {
+            switch requestedAction {
+            case "Play":
+                self.playButtonTapped(UIBarButtonItem())
+            case "Previous":
+                self.previousSong()
+            case "Next":
+                self.nextSong()
+            default:
+                println("Should not happend!")
+            }
+            let currentSongDictionary = ["CurrentSong": currentSongName]
+            watchKitInfo?.replyDictionary(currentSongDictionary)
+        }
     }
 }
 

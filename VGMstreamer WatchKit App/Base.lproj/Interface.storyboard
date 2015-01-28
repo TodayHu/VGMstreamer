@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="14B25" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="VGMstreamer_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="1" height="67.5" alignment="center" text="Song Name" textAlignment="center" numberOfLines="0" id="d1G-9N-QdV"/>
+                        <group width="1" alignment="center" id="4wH-3G-fPX">
+                            <items>
+                                <button width="50" alignment="right" title="&gt;" id="vAl-4U-FTN">
+                                    <connections>
+                                        <action selector="nextSong" destination="AgC-eL-Hgc" id="BBc-E5-3qX"/>
+                                    </connections>
+                                </button>
+                                <button width="50" alignment="left" title="&lt;" id="8sC-et-kge">
+                                    <connections>
+                                        <action selector="previousSong" destination="AgC-eL-Hgc" id="hHd-lN-PTO"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <button width="1" alignment="center" verticalAlignment="bottom" title="Play" id="ALD-BH-Nvl">
+                            <connections>
+                                <action selector="playSong" destination="AgC-eL-Hgc" id="kNJ-NS-hA2"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="songName" destination="d1G-9N-QdV" id="dxx-t8-dEE"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="590" y="297"/>
+        </scene>
+    </scenes>
+</document>
