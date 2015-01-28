@@ -11,19 +11,19 @@
 		990EA8C81A46608900DB213C /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 990EA8C61A46608900DB213C /* DataModel.xcdatamodeld */; };
 		991445BE1A4594EA00BF0609 /* WebContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991445BD1A4594EA00BF0609 /* WebContent.swift */; };
 		99253CD51A4C6BA400912A78 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99253CD41A4C6BA400912A78 /* SongTableViewCell.swift */; };
-		9943B87E1A78A1DE000000D9 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9943B87D1A78A1DE000000D9 /* InterfaceController.swift */; };
-		9943B8801A78A1DE000000D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9943B87F1A78A1DE000000D9 /* Images.xcassets */; };
-		9943B8841A78A1DE000000D9 /* VGMstreamer WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 9943B8831A78A1DE000000D9 /* VGMstreamer WatchKit App.app */; };
-		9943B88C1A78A1DE000000D9 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9943B88A1A78A1DE000000D9 /* Interface.storyboard */; };
-		9943B88E1A78A1DE000000D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9943B88D1A78A1DE000000D9 /* Images.xcassets */; };
-		9943B8911A78A1DE000000D9 /* VGMstreamer WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9943B8791A78A1DE000000D9 /* VGMstreamer WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		9943B89A1A78A41A000000D9 /* WatchKitInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9943B8991A78A41A000000D9 /* WatchKitInfo.swift */; };
+		993B99F61A78C9A50037372D /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993B99F51A78C9A50037372D /* InterfaceController.swift */; };
+		993B99F81A78C9A50037372D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 993B99F71A78C9A50037372D /* Images.xcassets */; };
+		993B99FC1A78C9A50037372D /* VGMstreamer WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 993B99FB1A78C9A50037372D /* VGMstreamer WatchKit App.app */; };
+		993B9A041A78C9A50037372D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 993B9A021A78C9A50037372D /* Interface.storyboard */; };
+		993B9A061A78C9A50037372D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 993B9A051A78C9A50037372D /* Images.xcassets */; };
+		993B9A091A78C9A50037372D /* VGMstreamer WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 993B99F11A78C9A50037372D /* VGMstreamer WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9950515B1A4C76FE008B685F /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9950515A1A4C76FE008B685F /* DataModel.swift */; };
 		9955F1831A53199B00B88D33 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9955F1821A53199B00B88D33 /* Images.xcassets */; };
 		996C55F31A46E60200A0FB83 /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996C55F21A46E60200A0FB83 /* AlertMessage.swift */; };
 		99BB38AD1A45A4EC005E2D2C /* StringHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BB38AC1A45A4EC005E2D2C /* StringHandle.swift */; };
 		99BB38B01A45CDB0005E2D2C /* SongListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BB38AF1A45CDB0005E2D2C /* SongListTableViewController.swift */; };
 		99BB38B21A45F5FB005E2D2C /* AlbumListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BB38B11A45F5FB005E2D2C /* AlbumListTableViewController.swift */; };
+		99CF81C61A78CB250002E6CC /* WatchKitInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CF81C51A78CB250002E6CC /* WatchKitInfo.swift */; };
 		99D5ACEB1A46F9C4007A8DD2 /* FavoriteAlbumTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D5ACEA1A46F9C4007A8DD2 /* FavoriteAlbumTableViewController.swift */; };
 		99E466501A263ED7009360A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E4664F1A263ED7009360A3 /* AppDelegate.swift */; };
 		99E466521A263ED8009360A3 /* LetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E466511A263ED7009360A3 /* LetterViewController.swift */; };
@@ -33,18 +33,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9943B8851A78A1DE000000D9 /* PBXContainerItemProxy */ = {
+		993B99FD1A78C9A50037372D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 99E466421A263ED7009360A3 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9943B8821A78A1DE000000D9;
+			remoteGlobalIDString = 993B99FA1A78C9A50037372D;
 			remoteInfo = "VGMstreamer WatchKit App";
 		};
-		9943B88F1A78A1DE000000D9 /* PBXContainerItemProxy */ = {
+		993B9A071A78C9A50037372D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 99E466421A263ED7009360A3 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9943B8781A78A1DE000000D9;
+			remoteGlobalIDString = 993B99F01A78C9A50037372D;
 			remoteInfo = "VGMstreamer WatchKit Extension";
 		};
 		99E466601A263ED8009360A3 /* PBXContainerItemProxy */ = {
@@ -57,13 +57,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		9943B8981A78A1DE000000D9 /* Embed App Extensions */ = {
+		993B9A101A78C9A50037372D /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				9943B8911A78A1DE000000D9 /* VGMstreamer WatchKit Extension.appex in Embed App Extensions */,
+				993B9A091A78C9A50037372D /* VGMstreamer WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,21 +75,21 @@
 		990EA8C71A46608900DB213C /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		991445BD1A4594EA00BF0609 /* WebContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebContent.swift; sourceTree = "<group>"; };
 		99253CD41A4C6BA400912A78 /* SongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
-		9943B8791A78A1DE000000D9 /* VGMstreamer WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "VGMstreamer WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9943B87C1A78A1DE000000D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9943B87D1A78A1DE000000D9 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		9943B87F1A78A1DE000000D9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		9943B8831A78A1DE000000D9 /* VGMstreamer WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VGMstreamer WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9943B8891A78A1DE000000D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9943B88B1A78A1DE000000D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		9943B88D1A78A1DE000000D9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		9943B8991A78A41A000000D9 /* WatchKitInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchKitInfo.swift; sourceTree = "<group>"; };
+		993B99F11A78C9A50037372D /* VGMstreamer WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "VGMstreamer WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		993B99F41A78C9A50037372D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		993B99F51A78C9A50037372D /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		993B99F71A78C9A50037372D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		993B99FB1A78C9A50037372D /* VGMstreamer WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VGMstreamer WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		993B9A011A78C9A50037372D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		993B9A031A78C9A50037372D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		993B9A051A78C9A50037372D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9950515A1A4C76FE008B685F /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		9955F1821A53199B00B88D33 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		996C55F21A46E60200A0FB83 /* AlertMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
 		99BB38AC1A45A4EC005E2D2C /* StringHandle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringHandle.swift; sourceTree = "<group>"; };
 		99BB38AF1A45CDB0005E2D2C /* SongListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongListTableViewController.swift; sourceTree = "<group>"; };
 		99BB38B11A45F5FB005E2D2C /* AlbumListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumListTableViewController.swift; sourceTree = "<group>"; };
+		99CF81C51A78CB250002E6CC /* WatchKitInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchKitInfo.swift; sourceTree = "<group>"; };
 		99D5ACEA1A46F9C4007A8DD2 /* FavoriteAlbumTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteAlbumTableViewController.swift; sourceTree = "<group>"; };
 		99E4664A1A263ED7009360A3 /* VGMstreamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VGMstreamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99E4664E1A263ED7009360A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9943B8761A78A1DE000000D9 /* Frameworks */ = {
+		993B99EE1A78C9A50037372D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -127,38 +127,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9943B87A1A78A1DE000000D9 /* VGMstreamer WatchKit Extension */ = {
+		993B99F21A78C9A50037372D /* VGMstreamer WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				9943B87D1A78A1DE000000D9 /* InterfaceController.swift */,
-				9943B87F1A78A1DE000000D9 /* Images.xcassets */,
-				9943B87B1A78A1DE000000D9 /* Supporting Files */,
+				993B99F51A78C9A50037372D /* InterfaceController.swift */,
+				993B99F71A78C9A50037372D /* Images.xcassets */,
+				993B99F31A78C9A50037372D /* Supporting Files */,
 			);
 			path = "VGMstreamer WatchKit Extension";
 			sourceTree = "<group>";
 		};
-		9943B87B1A78A1DE000000D9 /* Supporting Files */ = {
+		993B99F31A78C9A50037372D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9943B87C1A78A1DE000000D9 /* Info.plist */,
+				993B99F41A78C9A50037372D /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9943B8871A78A1DE000000D9 /* VGMstreamer WatchKit App */ = {
+		993B99FF1A78C9A50037372D /* VGMstreamer WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
-				9943B88A1A78A1DE000000D9 /* Interface.storyboard */,
-				9943B88D1A78A1DE000000D9 /* Images.xcassets */,
-				9943B8881A78A1DE000000D9 /* Supporting Files */,
+				993B9A021A78C9A50037372D /* Interface.storyboard */,
+				993B9A051A78C9A50037372D /* Images.xcassets */,
+				993B9A001A78C9A50037372D /* Supporting Files */,
 			);
 			path = "VGMstreamer WatchKit App";
 			sourceTree = "<group>";
 		};
-		9943B8881A78A1DE000000D9 /* Supporting Files */ = {
+		993B9A001A78C9A50037372D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9943B8891A78A1DE000000D9 /* Info.plist */,
+				993B9A011A78C9A50037372D /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -168,8 +168,8 @@
 			children = (
 				99E4664C1A263ED7009360A3 /* VGMstreamer */,
 				99E466621A263ED8009360A3 /* VGMstreamerTests */,
-				9943B87A1A78A1DE000000D9 /* VGMstreamer WatchKit Extension */,
-				9943B8871A78A1DE000000D9 /* VGMstreamer WatchKit App */,
+				993B99F21A78C9A50037372D /* VGMstreamer WatchKit Extension */,
+				993B99FF1A78C9A50037372D /* VGMstreamer WatchKit App */,
 				99E4664B1A263ED7009360A3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -179,8 +179,8 @@
 			children = (
 				99E4664A1A263ED7009360A3 /* VGMstreamer.app */,
 				99E4665F1A263ED8009360A3 /* VGMstreamerTests.xctest */,
-				9943B8791A78A1DE000000D9 /* VGMstreamer WatchKit Extension.appex */,
-				9943B8831A78A1DE000000D9 /* VGMstreamer WatchKit App.app */,
+				993B99F11A78C9A50037372D /* VGMstreamer WatchKit Extension.appex */,
+				993B99FB1A78C9A50037372D /* VGMstreamer WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -197,7 +197,7 @@
 				99BB38AC1A45A4EC005E2D2C /* StringHandle.swift */,
 				991445BD1A4594EA00BF0609 /* WebContent.swift */,
 				996C55F21A46E60200A0FB83 /* AlertMessage.swift */,
-				9943B8991A78A41A000000D9 /* WatchKitInfo.swift */,
+				99CF81C51A78CB250002E6CC /* WatchKitInfo.swift */,
 				99E466531A263ED8009360A3 /* Main.storyboard */,
 				99E466581A263ED8009360A3 /* LaunchScreen.xib */,
 				99E4664D1A263ED7009360A3 /* Supporting Files */,
@@ -237,29 +237,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9943B8781A78A1DE000000D9 /* VGMstreamer WatchKit Extension */ = {
+		993B99F01A78C9A50037372D /* VGMstreamer WatchKit Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9943B8971A78A1DE000000D9 /* Build configuration list for PBXNativeTarget "VGMstreamer WatchKit Extension" */;
+			buildConfigurationList = 993B9A0F1A78C9A50037372D /* Build configuration list for PBXNativeTarget "VGMstreamer WatchKit Extension" */;
 			buildPhases = (
-				9943B8751A78A1DE000000D9 /* Sources */,
-				9943B8761A78A1DE000000D9 /* Frameworks */,
-				9943B8771A78A1DE000000D9 /* Resources */,
+				993B99ED1A78C9A50037372D /* Sources */,
+				993B99EE1A78C9A50037372D /* Frameworks */,
+				993B99EF1A78C9A50037372D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9943B8861A78A1DE000000D9 /* PBXTargetDependency */,
+				993B99FE1A78C9A50037372D /* PBXTargetDependency */,
 			);
 			name = "VGMstreamer WatchKit Extension";
 			productName = "VGMstreamer WatchKit Extension";
-			productReference = 9943B8791A78A1DE000000D9 /* VGMstreamer WatchKit Extension.appex */;
+			productReference = 993B99F11A78C9A50037372D /* VGMstreamer WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit-extension";
 		};
-		9943B8821A78A1DE000000D9 /* VGMstreamer WatchKit App */ = {
+		993B99FA1A78C9A50037372D /* VGMstreamer WatchKit App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9943B8961A78A1DE000000D9 /* Build configuration list for PBXNativeTarget "VGMstreamer WatchKit App" */;
+			buildConfigurationList = 993B9A0E1A78C9A50037372D /* Build configuration list for PBXNativeTarget "VGMstreamer WatchKit App" */;
 			buildPhases = (
-				9943B8811A78A1DE000000D9 /* Resources */,
+				993B99F91A78C9A50037372D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -267,7 +267,7 @@
 			);
 			name = "VGMstreamer WatchKit App";
 			productName = "VGMstreamer WatchKit App";
-			productReference = 9943B8831A78A1DE000000D9 /* VGMstreamer WatchKit App.app */;
+			productReference = 993B99FB1A78C9A50037372D /* VGMstreamer WatchKit App.app */;
 			productType = "com.apple.product-type.application.watchapp";
 		};
 		99E466491A263ED7009360A3 /* VGMstreamer */ = {
@@ -277,12 +277,12 @@
 				99E466461A263ED7009360A3 /* Sources */,
 				99E466471A263ED7009360A3 /* Frameworks */,
 				99E466481A263ED7009360A3 /* Resources */,
-				9943B8981A78A1DE000000D9 /* Embed App Extensions */,
+				993B9A101A78C9A50037372D /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9943B8901A78A1DE000000D9 /* PBXTargetDependency */,
+				993B9A081A78C9A50037372D /* PBXTargetDependency */,
 			);
 			name = VGMstreamer;
 			productName = VGMstreamer;
@@ -316,10 +316,10 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = MistyDay;
 				TargetAttributes = {
-					9943B8781A78A1DE000000D9 = {
+					993B99F01A78C9A50037372D = {
 						CreatedOnToolsVersion = 6.2;
 					};
-					9943B8821A78A1DE000000D9 = {
+					993B99FA1A78C9A50037372D = {
 						CreatedOnToolsVersion = 6.2;
 					};
 					99E466491A263ED7009360A3 = {
@@ -346,28 +346,28 @@
 			targets = (
 				99E466491A263ED7009360A3 /* VGMstreamer */,
 				99E4665E1A263ED8009360A3 /* VGMstreamerTests */,
-				9943B8781A78A1DE000000D9 /* VGMstreamer WatchKit Extension */,
-				9943B8821A78A1DE000000D9 /* VGMstreamer WatchKit App */,
+				993B99F01A78C9A50037372D /* VGMstreamer WatchKit Extension */,
+				993B99FA1A78C9A50037372D /* VGMstreamer WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9943B8771A78A1DE000000D9 /* Resources */ = {
+		993B99EF1A78C9A50037372D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9943B8841A78A1DE000000D9 /* VGMstreamer WatchKit App.app in Resources */,
-				9943B8801A78A1DE000000D9 /* Images.xcassets in Resources */,
+				993B99FC1A78C9A50037372D /* VGMstreamer WatchKit App.app in Resources */,
+				993B99F81A78C9A50037372D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9943B8811A78A1DE000000D9 /* Resources */ = {
+		993B99F91A78C9A50037372D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9943B88C1A78A1DE000000D9 /* Interface.storyboard in Resources */,
-				9943B88E1A78A1DE000000D9 /* Images.xcassets in Resources */,
+				993B9A041A78C9A50037372D /* Interface.storyboard in Resources */,
+				993B9A061A78C9A50037372D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,11 +391,11 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9943B8751A78A1DE000000D9 /* Sources */ = {
+		993B99ED1A78C9A50037372D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9943B87E1A78A1DE000000D9 /* InterfaceController.swift in Sources */,
+				993B99F61A78C9A50037372D /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,7 +409,7 @@
 				99E466521A263ED8009360A3 /* LetterViewController.swift in Sources */,
 				990EA8C81A46608900DB213C /* DataModel.xcdatamodeld in Sources */,
 				9950515B1A4C76FE008B685F /* DataModel.swift in Sources */,
-				9943B89A1A78A41A000000D9 /* WatchKitInfo.swift in Sources */,
+				99CF81C61A78CB250002E6CC /* WatchKitInfo.swift in Sources */,
 				99027F2C1A466559008D68DF /* DataController.swift in Sources */,
 				99BB38B21A45F5FB005E2D2C /* AlbumListTableViewController.swift in Sources */,
 				996C55F31A46E60200A0FB83 /* AlertMessage.swift in Sources */,
@@ -430,15 +430,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9943B8861A78A1DE000000D9 /* PBXTargetDependency */ = {
+		993B99FE1A78C9A50037372D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9943B8821A78A1DE000000D9 /* VGMstreamer WatchKit App */;
-			targetProxy = 9943B8851A78A1DE000000D9 /* PBXContainerItemProxy */;
+			target = 993B99FA1A78C9A50037372D /* VGMstreamer WatchKit App */;
+			targetProxy = 993B99FD1A78C9A50037372D /* PBXContainerItemProxy */;
 		};
-		9943B8901A78A1DE000000D9 /* PBXTargetDependency */ = {
+		993B9A081A78C9A50037372D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9943B8781A78A1DE000000D9 /* VGMstreamer WatchKit Extension */;
-			targetProxy = 9943B88F1A78A1DE000000D9 /* PBXContainerItemProxy */;
+			target = 993B99F01A78C9A50037372D /* VGMstreamer WatchKit Extension */;
+			targetProxy = 993B9A071A78C9A50037372D /* PBXContainerItemProxy */;
 		};
 		99E466611A263ED8009360A3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -448,10 +448,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9943B88A1A78A1DE000000D9 /* Interface.storyboard */ = {
+		993B9A021A78C9A50037372D /* Interface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9943B88B1A78A1DE000000D9 /* Base */,
+				993B9A031A78C9A50037372D /* Base */,
 			);
 			name = Interface.storyboard;
 			sourceTree = "<group>";
@@ -475,7 +475,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		9943B8921A78A1DE000000D9 /* Debug */ = {
+		993B9A0A1A78C9A50037372D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -490,7 +490,7 @@
 			};
 			name = Debug;
 		};
-		9943B8931A78A1DE000000D9 /* Release */ = {
+		993B9A0B1A78C9A50037372D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
@@ -502,7 +502,7 @@
 			};
 			name = Release;
 		};
-		9943B8941A78A1DE000000D9 /* Debug */ = {
+		993B9A0C1A78C9A50037372D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -521,7 +521,7 @@
 			};
 			name = Debug;
 		};
-		9943B8951A78A1DE000000D9 /* Release */ = {
+		993B9A0D1A78C9A50037372D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -677,21 +677,23 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9943B8961A78A1DE000000D9 /* Build configuration list for PBXNativeTarget "VGMstreamer WatchKit App" */ = {
+		993B9A0E1A78C9A50037372D /* Build configuration list for PBXNativeTarget "VGMstreamer WatchKit App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9943B8941A78A1DE000000D9 /* Debug */,
-				9943B8951A78A1DE000000D9 /* Release */,
+				993B9A0C1A78C9A50037372D /* Debug */,
+				993B9A0D1A78C9A50037372D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		9943B8971A78A1DE000000D9 /* Build configuration list for PBXNativeTarget "VGMstreamer WatchKit Extension" */ = {
+		993B9A0F1A78C9A50037372D /* Build configuration list for PBXNativeTarget "VGMstreamer WatchKit Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9943B8921A78A1DE000000D9 /* Debug */,
-				9943B8931A78A1DE000000D9 /* Release */,
+				993B9A0A1A78C9A50037372D /* Debug */,
+				993B9A0B1A78C9A50037372D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		99E466451A263ED7009360A3 /* Build configuration list for PBXProject "VGMstreamer" */ = {
 			isa = XCConfigurationList;

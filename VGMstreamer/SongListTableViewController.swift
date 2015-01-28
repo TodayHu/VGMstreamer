@@ -328,30 +328,37 @@ class SongListViewController: UIViewController, UITableViewDelegate, UITableView
         
         let takeOneStep = { (forward: Bool) -> Void in
             let step = forward ? 1 : -1
-            let songItemMax = self.songListType == .FavoriteSong ? self.favoriteSongItems[self.currentSection].count : self.songItems.count
             
             if self.shuffleMode == .None {
                 self.currentRow += step
-                
-                if self.currentRow >= 0 {
-                    self.currentRow %= songItemMax
-                    
-                    if self.songListType == .FavoriteSong {
+
+                if self.songListType == .FavoriteSong {
+                    if (forward && self.currentRow == self.favoriteSongItems[self.currentSection].count) ||
+                       (!forward && self.currentRow < 0) {
                         self.currentSection += step
-                        
+
                         if self.currentSection >= 0 {
                             self.currentSection %= self.favoriteSongItems.count
                         } else {
-                            self.currentSection = 0
+                            self.currentSection = self.favoriteSongItems.count - 1
+                        }
+                        if forward {
+                            self.currentRow = 0
                         }
                     }
+                }
+                let songItemMax = self.songListType == .FavoriteSong ? self.favoriteSongItems[self.currentSection].count : self.songItems.count
+                
+                if self.currentRow >= 0 {
+                    self.currentRow %= songItemMax
                 } else {
-                    self.currentRow = 0
+                    self.currentRow = songItemMax - 1
                 }
             } else {
                 if self.songListType == .FavoriteSong {
                     self.currentSection = Int(arc4random_uniform(UInt32(self.favoriteSongItems.count)))
                 }
+                let songItemMax = self.songListType == .FavoriteSong ? self.favoriteSongItems[self.currentSection].count : self.songItems.count
                 self.currentRow = Int(arc4random_uniform(UInt32(songItemMax)))
             }
         }
@@ -368,14 +375,6 @@ class SongListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func selectSong() {
-        println("favoriteSongItems.count = \(favoriteSongItems.count)")
-        
-        for (index,section) in enumerate(favoriteSongItems) {
-            for song in section {
-                println("section \(section): \(song)")
-            }
-        }
-        
         if playBackMode == .RepeatAlbum {
             // last song was ended natuarally
             if mediaPlayer.playbackState == MPMoviePlaybackState.Paused && !manualPaused {
