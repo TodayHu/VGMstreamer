@@ -1,5 +1,4 @@
 # VGMstreamer
-## AppleWatch feature still in beta of Xcode 6.2, unstable
 
 ## Project Description
 #### 中文
@@ -33,6 +32,11 @@ Tap again the heart button to remove a song from *My Favorite Songs*.
 I don't own any copyright of these songs and khinsider might change the website structure anytime.
 Therefore, this project should take as a practice but not a product.
 
+
+## Relese Notes
+Update to Xcode Version 6.2 (6C131e)
+
+
 ## Example
 ![Main.storyboard](https://github.com/tsunghao/VGMstreamer/blob/master/screenshots/01_storyboard.png)
 ![Main Page](https://github.com/tsunghao/VGMstreamer/blob/master/screenshots/02_MainPage.png)
@@ -56,8 +60,13 @@ Therefore, this project should take as a practice but not a product.
 | StringHandle.swift | Class for handling strings |
 | WebContent.swift | Class for fetching web page |
 | AlertMessage.swift | Class for showing alert message |
-| Main.storyboard | UI layout |
-| Info.plist | meta information for app |
+| WatchKitInfo.swift | Class for storing Apple Watch message |
+| Main.storyboard | UI layout of iPhone |
+
+| Filename | Purpose |
+|---|---|
+| InterfaceController.swift | Apple Watch Extension Class |
+| Interface.storyboard | UI layout of Apple Watch |
 
 
 ## VGM Website

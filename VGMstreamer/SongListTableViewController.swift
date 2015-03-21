@@ -193,11 +193,10 @@ class SongListViewController: UIViewController, UITableViewDelegate, UITableView
         }
         currentSection = indexPath.section
         currentRow = indexPath.row
-        self.startMediaPlayer()
+        self.startMediaPlayer()        
     }
     
     // MARK: - Helper function
-    
     func saveFavoriteAlbum() {
         DataController.updateAlbumFavorite(self.title!, favorite: 1)
         AlertMessage.showAlert(title: "Success", message: "Add album into favorite!", viewController: self)

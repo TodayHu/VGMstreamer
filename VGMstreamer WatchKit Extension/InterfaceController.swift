@@ -8,6 +8,7 @@
 
 import WatchKit
 import Foundation
+import UIKit
 
 let key = "FunctionRequestKey"
 class InterfaceController: WKInterfaceController {
@@ -16,8 +17,6 @@ class InterfaceController: WKInterfaceController {
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        
-        // Configure interface objects here.
     }
 
     override func willActivate() {
