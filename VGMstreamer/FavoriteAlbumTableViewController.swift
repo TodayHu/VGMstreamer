@@ -48,7 +48,7 @@ class FavoriteAlbumTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("favoriteAlbumListCell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("favoriteAlbumListCell", forIndexPath: indexPath) as! UITableViewCell
 
         // Configure the cell...
         cell.textLabel?.text = albumLists[indexPath.row].albumName
@@ -61,7 +61,7 @@ class FavoriteAlbumTableViewController: UITableViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let songListTableVC = segue.destinationViewController as SongListViewController
+        let songListTableVC = segue.destinationViewController as! SongListViewController
         var indexPath = self.favoriteAlbumListView.indexPathForSelectedRow()
         songListTableVC.albumUrl = self.albumLists[indexPath!.row].albumLink
         songListTableVC.title = self.albumLists[indexPath!.row].albumName

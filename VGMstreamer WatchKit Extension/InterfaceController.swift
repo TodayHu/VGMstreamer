@@ -36,7 +36,7 @@ class InterfaceController: WKInterfaceController {
         WKInterfaceController.openParentApplication(info, reply: { (reply, error) -> Void in
             println("[In WatchKit@InterfaceController] reply: \(reply), error: \(error)")
             if reply != nil {
-                self.updateLabel(reply as [String : String])
+                self.updateLabel(reply as! [String : String])
             }
         })
     }
@@ -47,7 +47,7 @@ class InterfaceController: WKInterfaceController {
         WKInterfaceController.openParentApplication(info, reply: { (reply, error) -> Void in
             println("[In WatchKit@InterfaceController] reply: \(reply), error: \(error)")
             if reply != nil {
-                self.updateLabel(reply as [String : String])
+                self.updateLabel(reply as! [String : String])
             }
         })
     }
@@ -58,7 +58,7 @@ class InterfaceController: WKInterfaceController {
         WKInterfaceController.openParentApplication(info, reply: { (reply, error) -> Void in
             println("[In WatchKit@InterfaceController] reply: \(reply), error: \(error)")
             if reply != nil {
-                self.updateLabel(reply as [String : String])
+                self.updateLabel(reply as! [String : String])
             }
         })
     }

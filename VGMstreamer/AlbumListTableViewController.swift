@@ -60,7 +60,7 @@ class AlbumListTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("albumCell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("albumCell", forIndexPath: indexPath) as! UITableViewCell
 
         // Configure the cell...
         cell.textLabel?.text = albumNames[indexPath.row]
@@ -73,8 +73,8 @@ class AlbumListTableViewController: UITableViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let songListTableVC = segue.destinationViewController as SongListViewController
-        songListTableVC.albumUrl = sender as String
+        let songListTableVC = segue.destinationViewController as! SongListViewController
+        songListTableVC.albumUrl = sender as! String
         var indexPath = self.albumTableView.indexPathForSelectedRow()
         songListTableVC.title = self.albumNames[indexPath!.row]
         songListTableVC.songListType = .GeneralSong
@@ -147,7 +147,7 @@ class AlbumListTableViewController: UITableViewController {
                 parsedDataSet = StringHandle.subStringWithRegx(fullString, pattern: ">.*<")
                 if parsedDataSet.string != nil {
                     var albumName = parsedDataSet.string!
-                    albumName = StringHandle.substringWithRange(albumName, start: 1, end: countElements(albumName) - 1)
+                    albumName = StringHandle.substringWithRange(albumName, start: 1, end: count(albumName) - 1)
                     albumNames.append(albumName)
                 }
                 
@@ -155,7 +155,7 @@ class AlbumListTableViewController: UITableViewController {
                 
                 if parsedDataSet.string != nil {
                     albumLink = parsedDataSet.string!
-                    albumLink = StringHandle.substringToIndex(albumLink, index: countElements(albumLink) - countElements("\">"))
+                    albumLink = StringHandle.substringToIndex(albumLink, index: count(albumLink) - count("\">"))
                     albumLinks.append(albumLink)
                     
                     var remainRange = Range(start: fullRange.endIndex, end: handleString.endIndex)

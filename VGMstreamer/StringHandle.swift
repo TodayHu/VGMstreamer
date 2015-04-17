@@ -52,7 +52,7 @@ class StringHandle {
         let regex = NSRegularExpression(pattern: oldPattern, options: nil, error: nil)
         var strMutable: NSMutableString = ""
         strMutable.setString(string)
-        regex?.replaceMatchesInString(strMutable, options: nil, range: NSMakeRange(0, countElements(string)), withTemplate: newPattern)
+        regex?.replaceMatchesInString(strMutable, options: nil, range: NSMakeRange(0, count(string)), withTemplate: newPattern)
         return (strMutable as String)
     }
 }

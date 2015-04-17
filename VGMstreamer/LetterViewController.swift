@@ -51,10 +51,10 @@ class LetterViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "albumListSegue" {
-            let albumListTableVC = segue.destinationViewController as AlbumListTableViewController
+            let albumListTableVC = segue.destinationViewController as! AlbumListTableViewController
             albumListTableVC.letterUrl = kAlbumUrl + currentLatter
         } else if segue.identifier == "songListSegue" {
-            let songListTableVC = segue.destinationViewController as SongListViewController
+            let songListTableVC = segue.destinationViewController as! SongListViewController
             songListTableVC.albumUrl = ""
             songListTableVC.title = kFavoriteSongs
             songListTableVC.songListType = .FavoriteSong

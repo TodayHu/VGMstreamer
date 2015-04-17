@@ -162,7 +162,7 @@ class SongListViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell: SongTableViewCell! = tableView.dequeueReusableCellWithIdentifier("songCell", forIndexPath: indexPath) as SongTableViewCell
+        var cell: SongTableViewCell! = tableView.dequeueReusableCellWithIdentifier("songCell", forIndexPath: indexPath) as! SongTableViewCell
         
         // Configure the cell...
         if songListType == .FavoriteSong {
@@ -445,7 +445,7 @@ class SongListViewController: UIViewController, UITableViewDelegate, UITableView
             var parsedDataSet = StringHandle.subStringWithRegx(handleString, pattern: "http://.*.mp3\">Download")
             if parsedDataSet.string != nil {
                 var songLink: String = parsedDataSet.string!
-                songLink = StringHandle.substringToIndex(songLink, index: countElements(songLink) - countElements("\">Download"))
+                songLink = StringHandle.substringToIndex(songLink, index: count(songLink) - count("\">Download"))
                 var remainRange = Range(start: parsedDataSet.range!.endIndex, end: handleString.endIndex)
                 handleString = handleString.substringWithRange(remainRange)
 
@@ -455,14 +455,14 @@ class SongListViewController: UIViewController, UITableViewDelegate, UITableView
                     parsedDataSet = StringHandle.subStringWithRegx(webContent, pattern: "http://.*.mp3\">Click")
                     if parsedDataSet.string != nil {
                         var songLink = parsedDataSet.string!
-                        songLink = StringHandle.substringToIndex(songLink, index: countElements(songLink) - countElements("\">Click"))
+                        songLink = StringHandle.substringToIndex(songLink, index: count(songLink) - count("\">Click"))
                         
                         var revSongLink = StringHandle.reverseString(songLink)
                         parsedDataSet = StringHandle.subStringWithRegx(revSongLink, pattern: "/")
                         if parsedDataSet.string != nil {
                             remainRange = Range(start: revSongLink.startIndex, end: parsedDataSet.range!.startIndex)
                             var songName: String = revSongLink.substringWithRange(remainRange)
-                            songName = StringHandle.substringWithRange(songName, start: countElements("3pm."), end: countElements(songName))
+                            songName = StringHandle.substringWithRange(songName, start: count("3pm."), end: count(songName))
                             songName = StringHandle.reverseString(songName)
                             songData += [(link: songLink, name: songName)]
                         }
